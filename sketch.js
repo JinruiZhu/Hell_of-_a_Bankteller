@@ -14,7 +14,7 @@ var lightbulb, distancelight, lightbulbbag, distancepower, powerup, lightbulb2, 
 var water, distancewater, waterbag, away2, haswater, distanceflower, rain, rainflow,away6
 var window1, distancewindow1, window1bag, away3, distanceoutside, openwindow
 var circlebag, distancecircle, hasflower,showflower,distancecontrol,away4,openele,away5
-var title
+var title,titlepic
 
 var rectlenth
 var ele, shade,ele2
@@ -60,7 +60,7 @@ function preload() {
 	office3 = loadImage('office3.jpg');
 	ele = loadImage('ele.jpg');
 	ele2 = loadImage('ele2.jpg');
-
+	titlepic = loadImage('titlepic.png');
 bottompic = loadImage('bottom21.jpg');
 
 	lightbulb2 = loadImage('lightbulb2.png');
@@ -487,17 +487,18 @@ push();
 
 
 	//state indicator
-	fill(20, 233, 231);
-	textSize(40);
+	fill(255);
+	textSize(30);
 
-	text("Press'O' and 'W' for walking", 200, 400);
-	text("Press'P' to pick up stuff", 200, 200);
-		text("Press'Q' to use stuff", 200, 200);
+	text("Press'O' and 'W' for walking", 200, 200);
+	text("Press'P' to pick up stuff", 200, 250);
+		text("Press'Q' to use stuff", 200, 300);
 	// text(mouseY, 300, 200);
 	// text(distancecontrol, 300, 300);
 if(title){
 	background(0);
-	 text("Tom Clancy's Ghost Heaven",width/2,height/2);
+	 image(titlepic,width/2,height/2,400,600);
+			text("Press'n' to start", width/2,height/2+300);
 	 }
 
 }
@@ -557,7 +558,9 @@ function keyPressed() {
 	if (key === "0") {
 		zeroHeld = true;
 	}
-
+	if (key === "n") {
+		title = false;
+	}
 }
 
 

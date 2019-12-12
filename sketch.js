@@ -7,7 +7,10 @@ var theguy, people, people2, people3, people4, people5, people6, people7, people
 var peoplez, peoplez2, peoplez3, peoplez4, peoplez5, peoplez6, peoplez7, peoplez8, peoplez9, peoplez10, peoplez11, peoplez12, peoplez13, peoplez14, peoplez15, peoplez16
 var walkingcycle
 
-let input;
+/// PROF EDIT
+var input;
+var volume;
+/// PROF EDIT
 let analyzer;
 var vaultlight,vaultlighton,mouthopen
 
@@ -112,6 +115,10 @@ function preload() {
 
 function setup() {
 	createCanvas(1650, 1145);
+	/// PROF EDIT
+	userStartAudio();
+	input = new p5.AudioIn();
+	/// PROF EDIT
 	background(100);
 	walkspeed = 2.5;
 	runspeed = 6;
@@ -153,8 +160,6 @@ function setup() {
 	away7=1570;
 	openrabbit=false;
 	vault=false;
-	  input = new p5.AudioIn();
-  input.start();
 	vaultlight=0;
 		vaultlighton=false;
 	orangeappear=false;
@@ -183,6 +188,10 @@ away8=860;
 
 function draw() {
 
+	/// PROF EDIT
+	volume = input.getLevel();
+	console.log("Volume in draw(): " + volume);
+	/// PROF EDIT
 
 
 	//walking system
@@ -550,9 +559,10 @@ function draw() {
 		if(vault==true){
 
 
-			if(vaultlighton==false){
-    let volume = input.getLevel();
-
+		if(vaultlighton==false){
+		/// PROF EDIT
+		console.log("Volume in vault: " + volume);
+		/// PROF EDIT
     let threshold = 0.1;
 
     if (volume > threshold) {
@@ -1039,6 +1049,11 @@ function keyPressed() {
 		zeroHeld = true;
 	}
 	if (key === "n") {
+		/// PROF EDIT
+		/// Moved audio context to here, once the user has interacted with the page
+		input = new p5.AudioIn();
+	  input.start()
+		/// PROF EDIT;
 		title = false;
 	}
 }

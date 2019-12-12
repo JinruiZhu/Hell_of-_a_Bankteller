@@ -198,25 +198,26 @@ function draw() {
 
 	if (cHeld) {
 		bottom = true;
+		vaultlighton=true;
 		// stairopen=true;
 		// end=true;
 	}
 
-		if (oneHeld) {
-cheat=true;
-	}
-		if (threeHeld) {
-cheat=true;
-	}
-	if (fiveHeld) {
-cheat=true;
-	}
-	if (sevenHeld) {
-cheat=true;
-	}
-	if (nineHeld) {
-end=true;
-	}
+// 		if (oneHeld) {
+// cheat=true;
+// 	}
+// 		if (threeHeld) {
+// cheat=true;
+// 	}
+// 	if (fiveHeld) {
+// cheat=true;
+// 	}
+// 	if (sevenHeld) {
+// cheat=true;
+// 	}
+// 	if (nineHeld) {
+// end=true;
+// 	}
 
 	if (oHeld) {
 		walkingcycle += 1;

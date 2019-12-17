@@ -15,7 +15,7 @@ let analyzer;
 var vaultlight,vaultlighton,mouthopen
 
 var middle, bottom, bottompic,top1,toppic
-
+var rooompic
 var floor2, office2, office3
 var lightbulb, distancelight, lightbulbbag, distancepower, powerup, lightbulb2, away
 var water, distancewater, waterbag, away2, haswater, distanceflower, rain, rainflow, away6
@@ -98,6 +98,7 @@ function preload() {
 						last3=loadImage('last3.jpg');
 	cheatpic=loadImage('cheatpage.png');
 		endpic=loadImage('endpic.png');
+					rooompic=loadImage('rooom1.jpg');
 }
 
 
@@ -391,9 +392,12 @@ function draw() {
 		//house
 		if (scene1 == true) {
 			imageMode(CORNERS);
-			image(floor2, 750, 375, 1500, 750);
+			image(rooompic, 750, 375, 1500, 750);
 		}
 
+		if (Xpos <= 900 && Xpos >= 860 && Ypos == 600 ) {
+	image(floor2, 750, 375, 1500, 750);
+		}
 		if (scene2 == true) {
 			imageMode(CORNERS);
 			image(office2, 750, 375, 1500, 750);

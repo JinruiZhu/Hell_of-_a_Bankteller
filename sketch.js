@@ -395,7 +395,7 @@ function draw() {
 			image(rooompic, 750, 375, 1500, 750);
 		}
 
-		if (Xpos <= 900 && Xpos >= 860 && Ypos == 600 ) {
+		if (Xpos <= 890 && Xpos >= 845 && Ypos == 600 ) {
 	image(floor2, 750, 375, 1500, 750);
 		}
 		if (scene2 == true) {
@@ -409,16 +409,16 @@ function draw() {
 		}
 
 
-		if (Xpos <= 900 && Xpos >= 860 && Ypos == 600 && eightHeld == true) {
+		if (Xpos <= 890 && Xpos >= 845 && Ypos == 600 && eightHeld == true) {
 			scene2 = true;
 		}
 		if (scene2 == true) {
-			if (Xpos <= 900 && Xpos >= 860 && Ypos == 600 && sixHeld == true) {
+			if (Xpos <= 890 && Xpos >= 845 && Ypos == 600 && sixHeld == true) {
 				scene3 = true
 			}
 		}
 		if (scene3 == true) {
-			if (Xpos <= 900 && Xpos >= 860 && Ypos == 600 && twoHeld == true) {
+			if (Xpos <= 890 && Xpos >= 845 && Ypos == 600 && twoHeld == true) {
 				state2 = true;
 			}
 		}

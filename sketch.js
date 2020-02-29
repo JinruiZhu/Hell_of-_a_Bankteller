@@ -443,11 +443,12 @@ if (middle == true) {
 	if (scene1 == true) {
 		imageMode(CORNERS);
 		image(rooompic, 750, 375, 1500, 750);
-	}
-
-	if (Xpos <= 890 && Xpos >= 845 && Ypos == 600 ) {
+				if (Xpos <= 890 && Xpos >= 845 && Ypos == 600 ) {
 		image(floor2, 750, 375, 1500, 750);
 	}
+	}
+
+
 	if (scene2 == true) {
 		imageMode(CORNERS);
 		image(office2, 750, 375, 1500, 750);
@@ -476,6 +477,8 @@ if (middle == true) {
 
 
 	if (state2 == true) {
+		scene1=false;
+		scene2=false;
 		fill(255);
 		if (rectlenth >= 376) {
 			rectlenth -= 2;
@@ -580,10 +583,12 @@ if (bottom == true) {
 
 
 	if (openrabbit==true) {
+		decode2=false;
+					decode3=false;
+					decode4=false;
 		push();
 		imageMode(CORNERS);
 		image(openrabbitpic, 0, 750, 750, 1125);
-		image(newopenmouth,0, 375, 750, 750);
 		pop();
 		vault=true;
 	}
@@ -769,6 +774,8 @@ if (stairopen==true) {
 	}
 
 	if (board3==true) {
+		board1=false;
+		board2=false;
 		floorreach=true;
 		image(last3, 0, 0, 1500, 375);
 
@@ -881,9 +888,7 @@ if (distancepower <= 80 && lightbulbbag == true && qHeld) {
 	}
 	powerup = true;
 }
-if (powerup == true) {
-	image(lightbulb2, 398, 478, 30, 30);
-}
+
 
 //water
 /////////////////////////////////////////////////////////////////////////////////
@@ -949,9 +954,7 @@ if (distanceoutside <= 55 && window1bag == true && qHeld) {
 	away3 = 3000;
 	openwindow = true;
 }
-if (openwindow == true) {
-	image(window1, 598, 535, 76, 72);
-}
+
 
 
 
@@ -989,7 +992,7 @@ if (openwindow == true && haswater == true) {
 }
 
 if (hasflower == true) {
-
+haswater=false;
 	if (distancecircle <= 70 && pHeld == true) {
 		circlebag = true;
 	}
@@ -1014,10 +1017,9 @@ if (openele == true) {
 	imageMode(CORNERS);
 	image(ele2, 0, 375, 750, 750);
 	pop();
-	image(window1, 598, 535, 76, 72);
 	fill(255, 50, 50);
 	circle(238, 604, 14);
-	image(lightbulb2, 398, 478, 30, 30);
+
 }
 
 
@@ -1064,16 +1066,19 @@ if (bottom==true) {
 
 
 	 if (openrabbit==true) {
+			 openele = false;
 		push();
 		imageMode(CORNERS);
 		image(newopenmouth,0, 375, 750, 750);
 		pop();
-		 image(window1, 598, 535, 76, 72);
+
 	fill(255, 50, 50);
 	circle(238, 604, 14);
-	image(lightbulb2, 398, 478, 30, 30);
-	}
 
+	}
+	if (powerup == true) {
+	image(lightbulb2, 398, 478, 30, 30);
+}
 	if (stairopen==true) {
 	push();
 	imageMode(CORNERS);
@@ -1082,12 +1087,14 @@ if (bottom==true) {
 				push();
 	imageMode(CENTER);
 	// image(orange2,727,613,70,70);
-	image(window1, 598, 535, 76, 72);
+
 	pop();
 	}
 
 
-
+	if (openwindow == true) {
+	image(window1, 598, 535, 76, 72);
+}
 if (future==true){
 
 	if(Xpos<=100){
@@ -1139,12 +1146,55 @@ text("Press'O' and 'W' for walking.", 10, 1120);
 text("Press'P' to pick up object.", 475, 1120);
 text("Press'Q' to use object.", 900, 1120);
 
-	fill(255,200,200);
-text(Xpos, 300, 200);
-text(mouseY, 300, 250);
-// text(Ypos, 300, 300);
-text(mouseX, 300, 350);
 
+
+//   lightbulbbag = false;
+//   waterbag = false;
+//   window1bag = false;
+//   circlebag = false;
+//   wheelbag=false;
+//   wheeldoor=false;
+//   vault=false;
+//   orangeappear=false;
+//   orangebag=false;
+// 	chargerbag=false;
+//   chargerup=false;
+// 	bluebag=false;
+// 	blueappear=false;
+
+
+
+
+
+
+
+	fill(25,20,200);
+text("haswater", 200, 200);
+text(haswater, 300, 200);
+
+text("vaultlighton", 200, 250);
+text(vaultlighton, 300, 250);
+
+text("future", 200, 350);
+text(future, 300, 350);
+
+	text("openele", 200, 400);
+text(openele, 300, 400);
+
+	text("wheeldoor", 200, 450);
+text(wheeldoor, 300, 450);
+
+// 	  text("future", 200, 500);
+//   text(future, 300, 500);
+
+// 	  text("future", 200, 550);
+//   text(future, 300, 550);
+
+// 	  text("future", 200, 600);
+//   text(future, 300, 600);
+
+// 	  text("future", 200, 650);
+//   text(future, 300, 650);
 
 
 //titlepage

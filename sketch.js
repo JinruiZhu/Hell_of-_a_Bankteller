@@ -39,6 +39,7 @@ var vault, vaultpic
 var distancebattery,chargerup
 var toprect,floorreach,cantgoout
 var neotop6,bluebag,away12,bluepic,blueappear,away13
+var future,futurepics,futurepic1,futurepic2,futurepic3,futurepic4,futurepic5,futurepic6,futurepic7
 
 
 function preload() {
@@ -111,6 +112,15 @@ newopenmouth=loadImage('newopenmouth.jpg');
 chargerpic=loadImage('output0.png');
 bluepic=loadImage('bluepic.png');
 neotop6=loadImage('neo-top6.jpg');
+
+
+futurepic1=loadImage('future1.jpg');
+	futurepic2=loadImage('future2.jpg');
+	futurepic3=loadImage('future3.jpg');
+	futurepic4=loadImage('future4.jpg');
+	futurepic5=loadImage('future5.jpg');
+	futurepic6=loadImage('future6.jpg');
+	futurepic7=loadImage('future7.jpg');
 }
 
 
@@ -206,6 +216,7 @@ bluebag=false;
 blueappear=false;
 exitopen=false;
 LoveYKQ=false;
+future=false;
 }
 
 
@@ -756,6 +767,7 @@ if (stairopen==true) {
 			board3=true;
 		}
 	}
+
 	if (board3==true) {
 		floorreach=true;
 		image(last3, 0, 0, 1500, 375);
@@ -1075,6 +1087,41 @@ if (bottom==true) {
 	}
 
 
+
+if (future==true){
+
+	if(Xpos<=100){
+	futurepics=futurepic1;
+	}
+	if(Xpos>=101&&Xpos<=200){
+	futurepics=futurepic2;
+	}
+	if(Xpos>=201&&Xpos<=300){
+	futurepics=futurepic3;
+	}
+	if(Xpos>=301&&Xpos<=400){
+	futurepics=futurepic4;
+	}
+	if(Xpos>=401&&Xpos<=500){
+	futurepics=futurepic5;
+	}
+	if(Xpos>=501&&Xpos<=600){
+	futurepics=futurepic6;
+	}
+	if(Xpos>=601&&Xpos<=700){
+	futurepics=futurepic7;
+	}
+
+
+	push();
+	imageMode(CORNERS);
+	image(futurepics,0,0,1500,1125);
+pop();
+	if(Xpos>=710){
+	Xpos=710;
+	}
+}
+
 push();
 imageMode(CENTER);
 image(theguy, Xpos, Ypos, 200, 250);
@@ -1135,6 +1182,14 @@ if (cheat==true) {
 //   rect(width/2+217, 0, width/2+255, moving2);
 //   pop();
 // }
+
+
+if (Xpos>=1400&&exitopen==true){
+		future=true;
+	Xpos=20;
+		}
+
+
 }
 
 

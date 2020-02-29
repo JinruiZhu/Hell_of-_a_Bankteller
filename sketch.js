@@ -418,10 +418,10 @@ distancecharger= dist(Xpos, Ypos, 1447,667);
 distancebattery= dist(Xpos, Ypos, 172,31);
 
 if(vault==false){
-background(220,200,120);
+background(0);
 }
 if(orangeappear==true){
-background(220,200,120);
+background(0);
 }
 
 
@@ -429,7 +429,7 @@ background(220,200,120);
 
 
 
-
+if(future==false){
 
 
 
@@ -1095,6 +1095,9 @@ if (bottom==true) {
 	if (openwindow == true) {
 	image(window1, 598, 535, 76, 72);
 }
+}
+
+
 if (future==true){
 
 	if(Xpos<=100){
@@ -1168,21 +1171,21 @@ text("Press'Q' to use object.", 900, 1120);
 
 
 
-	fill(25,20,200);
-text("haswater", 200, 200);
-text(haswater, 300, 200);
+// 	  fill(25,20,200);
+// 	text("haswater", 200, 200);
+//   text(haswater, 300, 200);
 
-text("vaultlighton", 200, 250);
-text(vaultlighton, 300, 250);
+// 	text("vaultlighton", 200, 250);
+//   text(vaultlighton, 300, 250);
 
-text("future", 200, 350);
-text(future, 300, 350);
+//   text("future", 200, 350);
+//   text(future, 300, 350);
 
-	text("openele", 200, 400);
-text(openele, 300, 400);
+// 	  text("openele", 200, 400);
+//   text(openele, 300, 400);
 
-	text("wheeldoor", 200, 450);
-text(wheeldoor, 300, 450);
+// 	  text("wheeldoor", 200, 450);
+//   text(wheeldoor, 300, 450);
 
 // 	  text("future", 200, 500);
 //   text(future, 300, 500);
